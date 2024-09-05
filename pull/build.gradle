@@ -34,6 +34,8 @@ android {
         dataBinding = true
     }
 
+
+
 }
 
 dependencies {
@@ -44,6 +46,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
+  //  implementation(name: 'google-webrtc-1.0.32006', ext: 'aar')
+ //   implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
     implementation 'com.github.shenbengit:MVVMKit:1.0.3'
 }
