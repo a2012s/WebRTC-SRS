@@ -28,7 +28,7 @@ class RetrofitClient : BaseRetrofitClient() {
 
     private companion object {
         private const val BASE_URL =
-            "https://${Constant.SRS_SERVER_HTTPS}"
+            "https://${Constant.SRS_SERVER_HTTP}"
 //        private const val BASE_URL =
 //            "http://${Constant.SRS_SERVER_HTTP}"
     }

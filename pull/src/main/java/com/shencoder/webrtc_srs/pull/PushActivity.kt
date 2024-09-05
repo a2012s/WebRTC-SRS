@@ -1,4 +1,4 @@
-package com.shencoder.webrtc_srs.push
+package com.shencoder.webrtc_srs.pull
 
 import android.content.Context
 import android.media.MediaCodecInfo
@@ -10,17 +10,18 @@ import com.shencoder.mvvmkit.base.viewmodel.DefaultViewModel
 import com.shencoder.mvvmkit.util.MoshiUtil
 import com.shencoder.mvvmkit.util.toastError
 import com.shencoder.mvvmkit.util.toastWarning
-import com.shencoder.webrtc_srs.push.constant.Constant
-import com.shencoder.webrtc_srs.push.databinding.ActivityMainBinding
-import com.shencoder.webrtc_srs.push.http.RetrofitClient
-import com.shencoder.webrtc_srs.push.http.bean.SrsRequestBean
+import com.shencoder.webrtc_srs.pull.constant.Constant
+import com.shencoder.webrtc_srs.pull.databinding.ActivityPushBinding
+import com.shencoder.webrtc_srs.pull.http.RetrofitClient
+import com.shencoder.webrtc_srs.pull.http.bean.SrsRequestBean
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 import org.webrtc.*
 
-class MainActivity : BaseSupportActivity<DefaultViewModel, ActivityMainBinding>() {
+class PushActivity : BaseSupportActivity<DefaultViewModel, ActivityPushBinding>() {
 
     private companion object {
         private const val URL =
@@ -37,7 +38,7 @@ class MainActivity : BaseSupportActivity<DefaultViewModel, ActivityMainBinding>(
     private var surfaceTextureHelper: SurfaceTextureHelper? = null
 
     override fun getLayoutId(): Int {
-        return R.layout.activity_main
+        return R.layout.activity_push
     }
 
     override fun injectViewModel(): Lazy<DefaultViewModel> {

@@ -28,6 +28,6 @@ class App : Application() {
                     if (BuildConfig.DEBUG) Level.ERROR else Level.ERROR
                 )
                 .modules(appModule)
-        globalInit(BuildConfig.DEBUG, "WebRTC-SRS-PUSH", koinApplication)
+        globalInit(BuildConfig.DEBUG, "WebRTC-SRS-PULL", koinApplication)
     }
 }
